@@ -73,9 +73,9 @@
 	$uni-primary: #2979ff !default;
 	
 	.uni-section {
-		background-color: #fff;
+		background-color: #efefef;
 		// overflow: hidden;
-		margin-top: 10px;
+		// margin-top: 10px;
 	}
 	.uni-section-header {
 		position: relative;
@@ -84,9 +84,9 @@
 		/* #endif */
 		flex-direction: row;
 		align-items: center;
-		padding: 12px 10px;
+		padding: 12px 15px 0;
 		// height: 50px;
-		font-weight: normal;
+		// font-weight: 600;
 	}
 	.uni-section__head {
 		flex-direction: row;
@@ -96,20 +96,20 @@
 	}
 
 	.line {
-		height: 12px;
-		background-color: $uni-primary;
+		height: 20px;
+		background-color: #83BD75;
 		border-radius: 10px;
-		width: 4px;
+		width: 5px;
 	}
 
 	.circle {
-		width: 8px;
-		height: 8px;
+		width: 12px;
+		height: 12px;
 		border-top-right-radius: 50px;
 		border-top-left-radius: 50px;
 		border-bottom-left-radius: 50px;
 		border-bottom-right-radius: 50px;
-		background-color: $uni-primary;
+		background-color: #83BD75;
 	}
 
 	.uni-section__content {
@@ -122,7 +122,8 @@
 	}
 
 	.uni-section__content-title {
-		font-size: 14px;
+		font-size: 16px;
+		// font-weight: 600;
 		color: $uni-primary;
 	}
 

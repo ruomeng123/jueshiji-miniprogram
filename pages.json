@@ -1,17 +1,56 @@
 {
 	"pages": [{
-		"path": "pages/index/index",
+		"path": "pages/home/home",
 		"style": {
-			"navigationBarTitleText": "uni-app"
+			"navigationBarTitleText": "抉食记",
+			"enablePullDownRefresh": true
+		}
+	},
+	{
+		"path": "pages/record/record",
+		"style": {
+			"navigationBarTitleText": "抉食记"
+		}
+	},
+	{
+		"path": "pages/my/my",
+		"style": {
+			"navigationBarTitleText": "抉食记"
 		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "抉食记",
+		"navigationBarBackgroundColor": "#F4FCD9",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
 			"background": "#efeff4"
 		}
+	},
+	"tabBar": {
+		"color": "#EFEFEF",
+		"backgroundColor": "#534340",
+		"selectedColor": "#EFEFEF",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "./static/tabbar-icon/canjv.png",
+				"selectedIconPath": "./static/tabbar-icon/canjv-active.png"
+			},
+			{
+				"pagePath": "pages/record/record",
+				"text": "记录",
+				"iconPath": "./static/tabbar-icon/calendar.png",
+				"selectedIconPath": "./static/tabbar-icon/calendar-active.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "./static/tabbar-icon/user.png",
+				"selectedIconPath": "./static/tabbar-icon/user-active.png"
+			}
+		]
 	}
+	
 }
