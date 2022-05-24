@@ -1,22 +1,33 @@
 {
 	"pages": [{
-		"path": "pages/home/home",
-		"style": {
-			"navigationBarTitleText": "抉食记",
-			"enablePullDownRefresh": true
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "抉食记",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/record/record",
+			"style": {
+				"navigationBarTitleText": "抉食记"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "抉食记"
+			}
 		}
-	},
-	{
-		"path": "pages/record/record",
-		"style": {
-			"navigationBarTitleText": "抉食记"
-		}
-	},
-	{
-		"path": "pages/my/my",
-		"style": {
-			"navigationBarTitleText": "抉食记"
-		}
+	],
+	"subPackages": [{
+		"root": "subpkg",
+		"pages": [{
+			"path": "custom-menu/custom-menu",
+			"style": {
+				"navigationBarTitleText": "自定义菜单",
+				"enablePullDownRefresh": false
+			}
+		}]
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -31,8 +42,7 @@
 		"color": "#EFEFEF",
 		"backgroundColor": "#534340",
 		"selectedColor": "#EFEFEF",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/home/home",
 				"text": "首页",
 				"iconPath": "./static/tabbar-icon/canjv.png",
@@ -52,5 +62,5 @@
 			}
 		]
 	}
-	
+
 }

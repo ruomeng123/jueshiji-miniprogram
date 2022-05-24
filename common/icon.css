@@ -1,0 +1,10 @@
+/* 引入阿里巴巴icon */
+@font-face {
+  font-family: 'iconfont';  /* project id 3419921 */
+  src: url('');
+  src: url('?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_3419921_7r7k3cgewqp.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_3419921_7r7k3cgewqp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_3419921_7r7k3cgewqp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_3419921_7r7k3cgewqp.svg#iconfont') format('svg');
+}

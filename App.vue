@@ -14,10 +14,21 @@
 </script>
 
 <style lang="scss">
-	/*每个页面公共css */
-	@import '@/uni_modules/uni-scss/index.scss';
-	/* #ifndef APP-NVUE */
-	@import '@/static/customicons.css';
+	@import "./common/icon.css";
+
+	.iconfont {
+		font-family: "iconfont" !important;
+		font-size: 16px;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke-width: 0.2px;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	// /*每个页面公共css */
+	// @import '@/uni_modules/uni-scss/index.scss';
+	// /* #ifndef APP-NVUE */
+	// @import '@/static/customicons.css';
 	// 设置整个项目的背景色
 	page {
 		background-color: #EFEFEF;

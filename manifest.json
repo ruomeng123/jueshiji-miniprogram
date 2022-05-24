@@ -1,5 +1,5 @@
 {
-    "name" : "jueshiji-miniprogram",
+    "name" : "抉食记",
     "appid" : "wxca24a4c4179d5a5b",
     "description" : "",
     "versionName" : "1.0.0",
@@ -52,7 +52,10 @@
         /* 小程序特有相关 */
         "appid" : "wxca24a4c4179d5a5b",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : true,
+            "postcss" : true,
+            "minified" : true,
+            "es6" : true
         },
         "usingComponents" : true
     },

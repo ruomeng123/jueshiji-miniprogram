@@ -116,34 +116,34 @@
 	.blackboard {
 		display: flex;
 		flex-direction: column;
-		margin: 15px;
+		margin: 30rpx;
 		// padding: 5px;
 		height: 500rpx;
 		background-color: rgba(197, 216, 164, 0.7);
 		// background: repeating-linear-gradient(90deg, #fff 0%, #c5d8a4 100%);
 		box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
-		border-radius: 15px;
-		border: 5px solid #fff;
+		border-radius: 30rpx;
+		border: 10rpx solid #fff;
 		.blackboard-header {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			height: 15%;
-			font-size: 16px;
+			font-size: 32rpx;
 			background-color: rgba(187, 153, 129, 0.7);
 			padding: 10rpx;
 			// border-bottom: 1px solid #fff;
-			border-top-left-radius: 10px;
-			border-top-right-radius: 10px;
-			box-shadow: 0 3px 5px rgba(187, 153, 129, 0.5);
+			border-top-left-radius: 20rpx;
+			border-top-right-radius: 20rpx;
+			box-shadow: 0 6rpx 10rpx rgba(187, 153, 129, 0.5);
 			.header-title {
-				padding-left: 10px;
+				padding-left: 20rpx;
 				color: #fff;
 			}
 			.header-toggle-button {
 				padding: 10rpx;
 				color: #efefef;
-				font-size: 12px;
+				font-size: 24rpx;
 			}
 		}
 		.blackboard-body {
@@ -170,19 +170,19 @@
 				justify-content: space-evenly;
 				align-items: center;
 				.top-text {
-					font-size: 16px;
+					font-size: 32rpx;
 					text {
-						font-size: 18px;
-						line-height: 30px;
-						margin: 0 5px;
-						padding: 3px 0;
+						font-size: 36rpx;
+						line-height: 60rpx;
+						margin: 0 10rpx;
+						padding: 6rpx 0;
 						border-bottom: 2px solid #fff;
 					}
 				}
 				.btn {
 					width: 120rpx;
 					height: 120rpx;
-					font-size: 16px;
+					font-size: 32rpx;
 					line-height: 120rpx;
 					text-align: center;
 					border-radius: 50%;

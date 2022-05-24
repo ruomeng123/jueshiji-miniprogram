@@ -1,14 +1,18 @@
 <template>
-	<view>
-		<!-- 标题区域 -->
-		<!-- <my-title></my-title> -->
-		<!-- <view class="title-container">
-			<my-title></my-title>
-		</view> -->
+	<view class="home-container">
 		<!-- 随机菜单选择区域 -->
-		<uni-section title="随机选择食物" type="line">
+		<uni-section title="随机选择" type="line">
 			<my-blackboard></my-blackboard>
 		</uni-section>
+		<!-- 自定义菜单区域 -->
+		<uni-section title="自定义菜单" type="line">
+			<my-custom-menu></my-custom-menu>
+		</uni-section>
+		
+		<!-- 底部信息区 -->
+		<view class="my-footer-container">
+			<my-footer></my-footer>
+		</view>
 	</view>
 </template>
 
@@ -19,6 +23,7 @@
 				
 			};
 		},
+		// 下拉刷新
 		onPullDownRefresh() {
 			
 		}
