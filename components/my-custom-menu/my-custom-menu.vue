@@ -63,6 +63,7 @@
 			}
 			.custom-restaurant {
 				background-color: #C5D8A4;
+				// background-color: rgba(197, 216, 164, 0.7);
 				border-bottom-left-radius: 20rpx;
 				border-bottom-right-radius: 20rpx;
 				border-top-left-radius: 0;

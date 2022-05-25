@@ -3,6 +3,7 @@
 		<view class="my-footer">
 			<text class="name">抉食记小程序</text>
 			<text class="info">由若梦提供技术支持 v.1.0.0</text>
+			<text class="info">感谢我家崽崽女孩的倾情陪伴! @崽崽zepeto</text>
 		</view>
 	</view>
 </template>

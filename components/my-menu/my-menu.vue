@@ -17,27 +17,26 @@
 </template>
 
 <script>
+	import { mapState, mapMutations } from 'vuex'
 	export default {
 		name: "my-menu",
 		data() {
 			return {
-				foodList: ['番茄炒蛋', '辣椒炒肉', '猪肉炖粉条', '酸辣土豆丝', '地锅鸡', '大盘鸡', '红烧带鱼', '泡面', '番茄炒蛋', '辣椒炒肉', '猪肉炖粉条', '酸辣土豆丝',
-					'地锅鸡', '大盘鸡', '红烧带鱼', '泡面', '番茄炒蛋', '辣椒炒肉', '猪肉炖粉条', '酸辣土豆丝', '地锅鸡', '大盘鸡', '红烧带鱼', '泡面', '番茄炒蛋',
-					'辣椒炒肉', '猪肉炖粉条', '酸辣土豆丝', '地锅鸡', '大盘鸡', '红烧带鱼', '泡面'
-				], // 抽取的食物列表
 				isEdit: false, // 控制编辑状态的切换
 			};
 		},
+		computed: {
+			...mapState('m_menu', ['foodList'])
+		},
 		methods: {
+			...mapMutations('m_menu', ['updateMenu']),
 			// 编辑按钮点击事件
 			editBtn() {
 				if(!this.isEdit) {
 					// 在编辑状态
-					
 					this.isEdit = true
 				} else {
 					// 在正常状态
-					
 					this.isEdit = false
 				}
 			},
@@ -46,6 +45,7 @@
 				if(this.isEdit) {
 					// 在编辑状态
 					this.foodList.splice(index, 1)
+					this.updateMenu(this.foodList)
 				}
 				
 			}

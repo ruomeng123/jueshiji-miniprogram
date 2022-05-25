@@ -37,12 +37,13 @@
 </template>
 
 <script>
+	import { mapState } from 'vuex'
 	export default {
 		name: "my-blackboard",
 		data() {
 			return {
+				// foodList: ['番茄炒蛋', '辣椒炒肉', '猪肉炖粉条', '酸辣土豆丝', '地锅鸡', '大盘鸡', '红烧带鱼', '泡面'], // 抽取的食物列表
 				checkingList: [], // 当前抽取的列表
-				foodList: ['番茄炒蛋', '辣椒炒肉', '猪肉炖粉条', '酸辣土豆丝', '地锅鸡', '大盘鸡', '红烧带鱼', '泡面'], // 抽取的食物列表
 				checkedFood: '什么', // 抽取食物结果内容展示
 				isStart: true, // 切换开始/停止状态
 				timer: null, // 定时器ID
@@ -50,6 +51,9 @@
 				checkedRestaurant: '哪吃', // 抽取餐厅结果内容展示
 				restaurantList: ['老乡鸡', '青禾日料', '喜姐炸串', '卤人甲卤炸鸡爪', '鸡鸣汤包', '正新鸡排', '杨国福麻辣烫', '沙县小吃'], // 抽取的餐厅列表
 			}
+		},
+		computed: {
+			...mapState('m_menu', ['foodList'])
 		},
 		methods: {
 			// 随机抽取开始按钮
@@ -120,7 +124,6 @@
 		// padding: 5px;
 		height: 500rpx;
 		background-color: rgba(197, 216, 164, 0.7);
-		// background: repeating-linear-gradient(90deg, #fff 0%, #c5d8a4 100%);
 		box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 		border-radius: 30rpx;
 		border: 10rpx solid #fff;
@@ -132,7 +135,6 @@
 			font-size: 32rpx;
 			background-color: rgba(187, 153, 129, 0.7);
 			padding: 10rpx;
-			// border-bottom: 1px solid #fff;
 			border-top-left-radius: 20rpx;
 			border-top-right-radius: 20rpx;
 			box-shadow: 0 6rpx 10rpx rgba(187, 153, 129, 0.5);
