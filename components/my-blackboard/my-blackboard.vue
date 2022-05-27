@@ -70,7 +70,7 @@
 							this.selectedFood(this.restaurantList)
 						}
 						// this.selectedFood(this.checkingList)
-					}, 100)
+					}, 80)
 					// 切换按钮状态
 					this.isStart = false
 					
@@ -124,7 +124,7 @@
 		// padding: 5px;
 		height: 500rpx;
 		background-color: rgba(197, 216, 164, 0.7);
-		box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+		box-shadow: 1px 6rpx 10rpx rgba(0, 0, 0, 0.3);
 		border-radius: 30rpx;
 		border: 10rpx solid #fff;
 		.blackboard-header {

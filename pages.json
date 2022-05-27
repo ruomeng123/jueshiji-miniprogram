@@ -27,7 +27,25 @@
 				"navigationBarTitleText": "自定义菜单",
 				"enablePullDownRefresh": false
 			}
-		}]
+		}, {
+			"path": "show-map/show-map",
+			"style": {
+				"navigationBarTitleText": "自定义餐厅",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 150,
+				"backgroundColor": "#f8f8f8"
+			}
+
+		}    ,{
+                    "path" : "custom-restaurant/custom-restaurant",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

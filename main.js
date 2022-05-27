@@ -3,6 +3,15 @@ import App from './App'
 
 import store from './store/store.js'
 
+// 引入SDK核心类，js文件根据自己业务，位置可自行放置
+// var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+// import QQMapWX from '@/libs/qqmap-wx-jssdk.js'
+
+// // 实例化API核心类
+//     const qqmapsdk = new QQMapWX({
+//         key: 'IWIBZ-BG5E3-COK3S-Y2RPR-2M2QK-5YFUZ'
+//     });
+
 // // 导入网络请求的包
 // import { $http } from '@escook/request-miniprogram'
 
@@ -41,7 +50,8 @@ App.mpType = 'app'
 
 const app = new Vue({
   ...App,
-  store
+  store,
+  // QQMapWX
 })
 app.$mount()
 
