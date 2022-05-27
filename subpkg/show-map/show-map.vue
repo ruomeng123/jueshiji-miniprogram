@@ -51,13 +51,14 @@
 				page_size: 20, // 请求餐厅每页的数据
 				total: 0,
 				isLoading: false, // 节流阀
+				restaurantInfo: []
 			};
 		},
 		onLoad() {
 			this.getaddress()
 		},
 		computed: {
-			...mapState('m_restaurant', ['currentLocationInfo', 'RestaurantInfo']), 
+			...mapState('m_restaurant', ['currentLocationInfo']), 
 			checkedCount() {
 				return this.restaurantList.filter(item => item.type).length
 			},
@@ -68,7 +69,7 @@
 			}
 		},
 		methods: {
-			// ...mapMutations('m_restaurant', ['updateCurrentLocationInfo', 'updateRestaurantInfo']),
+			...mapMutations('m_restaurant', ['addRestaurant']),
 			// 获取选择地址
 			getaddress() {
 				let that = this
@@ -224,19 +225,15 @@
 			},
 			// 单选框点击事件
 			radioClick(e) {
-				// console.log(e);
 				// 修改选中状态(渲染到视图)
 				const findResult = this.restaurantList.find(item => item.id === e.id)
 				if(findResult) {
 					// 找到并返回了对应的餐厅findResult
 					findResult.type = e.state
-					console.log(findResult.type);
-					// console.log(this.restaurantList);
 				}
 			},
 			// 全选框的点击事件,更新所有餐厅的选中状态(渲染到视图)
 			changeAllState() {
-				//console.log(e);
 				if(this.isFullChecked) {
 					// 已经全选了,再点击就是取消全选
 					this.restaurantList.forEach(item => item.type = false)
@@ -244,27 +241,41 @@
 					// 未全选状态
 					this.restaurantList.forEach(item => item.type = true)
 				}
-				// this.isFullChecked = !this.isFullChecked
-				// console.log(this.checkedCount);
-				// console.log(this.page_index * this.page_size);
-				// console.log(this.restaurantList);
+				
 			},
+			// 选好提交事件
 			submitRestaurant() {
 				// 判断是否勾选了
 				if(!this.checkedCount) {
+					// 没有勾选
 					uni.showModal({
 						title: '提示',
 						content: '您还未选择餐厅,是否直接查看已添加的餐厅列表',
 						success: function (res) {
 							if (res.confirm) {
 								console.log('用户点击确定');
+								uni.navigateTo({
+									url: '/subpkg/custom-restaurant/custom-restaurant'
+								})
 							} else if (res.cancel) {
 								console.log('用户点击取消');
 							}
 						}
 					});
+				} else {
+					// 勾选了,进行提交
+					this.restaurantInfo = this.restaurantList.filter(item => item.type === true).map(item => item.title)
+					// let arr = this.restaurantList.filter(item => item.type === true)
+					// for(let i = 0; i < arr.length; i++) {
+					// 	this.restaurantInfo.push(arr[i].title)
+					// }
+					// console.log(this.restaurantInfo);
+					this.addRestaurant(this.restaurantInfo)
+					// 跳转
+					uni.navigateTo({
+						url: '/subpkg/custom-restaurant/custom-restaurant'
+					})
 				}
-				
 			}
 		},
 		// 上拉翻页事件

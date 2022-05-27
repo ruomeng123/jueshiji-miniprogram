@@ -49,11 +49,12 @@
 				timer: null, // 定时器ID
 				atHome: true, // 切换"在哪吃"模式
 				checkedRestaurant: '哪吃', // 抽取餐厅结果内容展示
-				restaurantList: ['老乡鸡', '青禾日料', '喜姐炸串', '卤人甲卤炸鸡爪', '鸡鸣汤包', '正新鸡排', '杨国福麻辣烫', '沙县小吃'], // 抽取的餐厅列表
+				// restaurantInfo: ['老乡鸡', '青禾日料', '喜姐炸串', '卤人甲卤炸鸡爪', '鸡鸣汤包', '正新鸡排', '杨国福麻辣烫', '沙县小吃'], // 抽取的餐厅列表
 			}
 		},
 		computed: {
-			...mapState('m_menu', ['foodList'])
+			...mapState('m_menu', ['foodList']),
+			...mapState('m_restaurant', ['restaurantInfo'])
 		},
 		methods: {
 			// 随机抽取开始按钮
@@ -67,7 +68,7 @@
 						if(this.atHome) {
 							this.selectedFood(this.foodList)
 						} else {
-							this.selectedFood(this.restaurantList)
+							this.selectedFood(this.restaurantInfo)
 						}
 						// this.selectedFood(this.checkingList)
 					}, 80)
@@ -103,7 +104,7 @@
 					this.atHome = true
 				} else {
 					// 出门吃
-					this.checkingList = this.restaurantList
+					this.checkingList = this.restaurantInfo
 					this.checkedRestaurant = '哪吃'
 					this.atHome = false
 				}

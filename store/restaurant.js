@@ -1,17 +1,17 @@
 export default {
 	namespaced: true,
-	status: () => ({
+	state: () => ({
 		// 用户的当前位置信息
 		currentLocationInfo: JSON.parse(uni.getStorageSync('currentLocationInfo') || '{}'),
 		// 自选附近餐厅列表
-		RestaurantInfo: JSON.parse(uni.getStorageSync('RestaurantInfo') || '{}'),
+		restaurantInfo: uni.getStorageSync('restaurantInfo') || [],
 	}),
 	mutations: {
-		// 更新用户当前位置信息
-		updateCurrentLocationInfo(state, LocationInfo) {
-			state.currentLocationInfo = LocationInfo
-			this.commit('m_restaurant/saveCurrentLocationInfo')
-		},
+		// // 更新用户当前位置信息
+		// updateCurrentLocationInfo(state, LocationInfo) {
+		// 	state.currentLocationInfo = LocationInfo
+		// 	this.commit('m_restaurant/saveCurrentLocationInfo')
+		// },
 		// 存储用户当前位置信息
 		saveCurrentLocationInfo(state) {
 			uni.setStorageSync('currentLocationInfo', JSON.stringify(state.currentLocationInfo))
@@ -21,9 +21,18 @@ export default {
 			state.RestaurantInfo = RestaurantInfo
 			this.commit('m_restaurant/saveRestaurantInfo')
 		},
+		// 添加餐厅
+		addRestaurant(state, restaurants) {
+			// state.restaurantInfo = [...state.restaurantInfo, ...restaurants]
+			let arr = [...state.restaurantInfo, ...restaurants]
+			// 数组去重
+			let set = new Set(arr)
+			state.restaurantInfo = Array.from(set)
+			this.commit('m_restaurant/saveRestaurantInfo')
+		},
 		// 存储附近餐厅信息
 		saveRestaurantInfo(state) {
-			uni.setStorageSync('RestaurantInfo', JSON.stringify(state.RestaurantInfo))
+			uni.setStorageSync('restaurantInfo', state.restaurantInfo)
 		}
 	},
 	getters: {

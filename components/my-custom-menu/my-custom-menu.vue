@@ -57,7 +57,7 @@
 		.custom-btn {
 			display: flex;
 			flex-direction: column;
-			height: 180rpx;
+			height: 270rpx;
 			margin: 30rpx;
 			font-size: 30rpx;
 			background-color: antiquewhite;
