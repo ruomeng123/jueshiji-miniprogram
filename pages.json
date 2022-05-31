@@ -2,8 +2,7 @@
 	"pages": [{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": "抉食记",
-				"enablePullDownRefresh": true
+				"navigationBarTitleText": "抉食记"
 			}
 		},
 		{
@@ -36,16 +35,22 @@
 				"backgroundColor": "#F4FCD9"
 			}
 
-		}    ,{
-                    "path" : "custom-restaurant/custom-restaurant",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+		}, {
+			"path": "custom-restaurant/custom-restaurant",
+			"style": {
+				"navigationBarTitleText": "餐厅列表",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "my-about/my-about",
+			"style": {
+				"navigationBarBackgroundColor": "#fbfcdb",
+				"navigationBarTitleText": "抉食记",
+				"enablePullDownRefresh": false
+			}
+
+		}]
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

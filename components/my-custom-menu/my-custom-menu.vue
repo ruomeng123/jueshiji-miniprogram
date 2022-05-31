@@ -60,7 +60,6 @@
 			height: 270rpx;
 			margin: 30rpx;
 			font-size: 30rpx;
-			background-color: antiquewhite;
 			box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
 			border-radius: 30rpx;
 			border: 10rpx solid #fff;

@@ -52,9 +52,7 @@
 			delFood(index) {
 				if(this.isEdit) {
 					// 在编辑状态
-					console.log(this.restaurantInfo);
 					this.restaurantInfo.splice(index, 1)
-					console.log(this.restaurantInfo);
 					this.updateRestaurantInfo(this.restaurantInfo)
 				}
 				

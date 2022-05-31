@@ -2,7 +2,7 @@
 	<view class="add-food-container">
 		<view class="add-food">
 			<view class="add-input">
-				<input class="uni-input" @input="input" v-model="inputValue" type="text" focus maxlength="18" placeholder="请输入您最近学会的拿手菜!" />
+				<input class="uni-input" @input="input" v-model="inputValue" type="text" focus maxlength="18" placeholder="请输入..." />
 			</view>
 			<view class="add-btn" @click="addFoodBtn">添加</view>
 		</view>
@@ -31,14 +31,19 @@
 				this.timer = setTimeout(() => {
 					if(e.target.value.length === 18) {
 						return uni.$showMsg('字数太长了哦!')
-					}
+					} 
 					// 拿到用户输入的内容
 					this.inputValue = e.target.value
 				}, 700)
 			},
 			// 添加按钮点击事件
 			addFoodBtn() {
-				if(this.foodList.indexOf(this.inputValue) !== -1) {
+				// 避免用户输入空格也能添加成功(bug修改01)
+				if(this.inputValue.trim().length === 0) {
+					this.inputValue = ''
+					return uni.$showMsg('请输入食物!')
+				} else if(this.foodList.indexOf(this.inputValue) !== -1) {
+					this.inputValue = ''
 					// 代表用户输入的食物有重复的
 					return uni.$showMsg('食物已存在,勿重复添加!')
 				}

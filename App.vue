@@ -15,6 +15,7 @@
 
 <style lang="scss">
 	@import "./common/icon.css";
+	@import "@/static/iconfont.css";
 
 	.iconfont {
 		font-family: "iconfont" !important;

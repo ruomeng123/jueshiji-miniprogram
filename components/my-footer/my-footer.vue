@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="footer-container">
 		<view class="my-footer">
 			<text class="name">抉食记小程序</text>
 			<text class="info">由若梦提供技术支持 v.1.0.0</text>
@@ -20,6 +20,9 @@
 </script>
 
 <style lang="scss">
+	.footer-container {
+		margin-top: 300rpx;
+	}
 	.my-footer {
 		display: flex;
 		flex-direction: column;

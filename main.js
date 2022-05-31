@@ -12,25 +12,25 @@ import store from './store/store.js'
 //         key: 'IWIBZ-BG5E3-COK3S-Y2RPR-2M2QK-5YFUZ'
 //     });
 
-// // 导入网络请求的包
-// import { $http } from '@escook/request-miniprogram'
+// 导入网络请求的包
+import { $http } from '@escook/request-miniprogram'
 
-// uni.$http = $http
+uni.$http = $http
 
-// // 请求的根路径
+// 请求的根路径
 // $http.baseUrl = 'https://www.uinav.com'
 
-// // 请求拦截器
-// $http.beforeRequest = function(options) {
-//   uni.showLoading({
-//     title: '数据加载中...'
-//   })
-// }
+// 请求拦截器
+$http.beforeRequest = function(options) {
+  uni.showLoading({
+    title: '数据加载中...'
+  })
+}
 
-// // 响应拦截器
-// $http.afterRequest = function() {
-//   uni.hideLoading()
-// }
+// 响应拦截器
+$http.afterRequest = function() {
+  uni.hideLoading()
+}
 
 // 封装弹框的方法
 uni.$showMsg = function(title = '数据请求失败！', duration = 1500) {

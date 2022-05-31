@@ -61,7 +61,7 @@
 			actionBtn() {
 				// this.isStart = false
 				if(this.isStart) {
-					// 注意!!需要先给"当前抽取的列表"一个默认
+					// 注意!!需要先给"当前抽取的列表"一个默认值
 					this.checkingList = this.foodList
 					// 开始抽取
 					this.timer = setInterval(() => {
